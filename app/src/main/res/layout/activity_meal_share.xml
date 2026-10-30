@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F8FAFC">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hostel Meal Pass Exchange 🍲"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#D97706" />
+
+    <EditText
+        android:id="@+id/etMealDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meal Type (e.g., Dinner Pass / Extra Lunch)"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etHostelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hostel/Mess Name (e.g., Block B Mess)" />
+
+    <EditText
+        android:id="@+id/etMealPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Token Price ($ or 0 for Free)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnAddMeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List Meal Coupon"
+        android:backgroundTint="#D97706"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvMealList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#334155"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

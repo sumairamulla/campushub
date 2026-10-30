@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8FAFC"
+    android:padding="16dp">
+
+    <!-- Category Filter Bar -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCatAll"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="All"
+                android:textSize="12sp"
+                android:backgroundTint="#2563EB"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnCatBooks"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="📚 Books"
+                android:textSize="12sp"
+                android:backgroundTint="#E2E8F0"
+                android:textColor="#1E293B"
+                android:layout_marginStart="6dp" />
+
+            <Button
+                android:id="@+id/btnCatTech"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="💻 Tech"
+                android:textSize="12sp"
+                android:backgroundTint="#E2E8F0"
+                android:textColor="#1E293B"
+                android:layout_marginStart="6dp" />
+
+            <Button
+                android:id="@+id/btnCatLab"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="🔬 Lab Gear"
+                android:textSize="12sp"
+                android:backgroundTint="#E2E8F0"
+                android:textColor="#1E293B"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Search Input -->
+    <EditText
+        android:id="@+id/etSearchMarket"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:hint="🔍 Search marketplace items..."
+        android:background="#FFFFFF"
+        android:paddingHorizontal="14dp"
+        android:textSize="14sp"
+        android:elevation="1dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Collapsible Form Toggle -->
+    <Button
+        android:id="@+id/btnTogglePostForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Post New Item for Sale"
+        android:backgroundTint="#16A34A"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Listing Input Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPostForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <EditText
+                android:id="@+id/etItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title (e.g. Organic Chemistry Textbook)"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etItemPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Price (₹)"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etCondition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Condition (e.g. Good)"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etItemSeller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seller Name &amp; Hostel Block"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="6dp" />
+
+            <CheckBox
+                android:id="@+id/cbExchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open for Item Exchange 🔄" />
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:background="#E2E8F0"
+                android:contentDescription="Photo Preview"
+                android:layout_marginVertical="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSelectImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Photo"
+                    android:textSize="12sp"
+                    android:backgroundTint="#475569"
+                    android:layout_marginEnd="4dp" />
+
+                <Button
+                    android:id="@+id/btnAddItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Publish Listing"
+                    android:textSize="12sp"
+                    android:backgroundTint="#16A34A" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Marketplace Items List Feed -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/containerListings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>
